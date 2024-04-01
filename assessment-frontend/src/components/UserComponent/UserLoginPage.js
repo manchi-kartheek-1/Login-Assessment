@@ -83,10 +83,10 @@ function UserLoginPage() {
                     </input>
                     {errors.password && <div className='invalid-feedback'>{errors.password}</div>}
                 </div>
-                <div className='formButtons'>
-                    <a onClick={login}>
+                <div>
+                    <button onClick={login} className='formButtons'>
                         Submit
-                    </a>
+                    </button>
                 </div>
             </form>
         </div>
