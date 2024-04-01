@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { userLogin, getOtp } from '../../services/employeeService';
-import CustomDialog from './CustomDialog';
 
 let user = null;
 let logInResponse = null;
@@ -10,15 +9,10 @@ function UserLoginPage() {
     localStorage.removeItem('token');
     const [userId, setUserId] = useState('');
     const [password, setPassword] = useState('');
-    const [showDialog, setShowDialog] = useState(false);
-    const [dialogMessage, setDialogMessage] = useState('');
     const [errors, setErrors] = useState({
         userId: '',
         password: ''
     });
-    const handleDialogClose = () => {
-        setShowDialog(false);
-    };
     const navigate = useNavigate();
     const login = async (e) => {
         user = { userId, password };
@@ -60,7 +54,7 @@ function UserLoginPage() {
     return (
 
         <div class="container">
-            <CustomDialog show={showDialog} onClose={handleDialogClose} message={dialogMessage} />
+           
             <h2>Login</h2>
             <form>
                 {/* <label>User Id:</label> */}
