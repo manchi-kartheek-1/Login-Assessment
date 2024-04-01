@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import UserLogin from './components/UserComponent/UserLoginPage';
-import HelloWorld from './components/UserComponent/HelloWorld';
+import HelloUser from './components/UserComponent/HelloUser';
 
 const router = createBrowserRouter([
   {
@@ -21,8 +21,8 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/helloWorld",
-        element: <HelloWorld/>,
+        path: "/helloUser",
+        element: <HelloUser/>,
       }
     ],
   },

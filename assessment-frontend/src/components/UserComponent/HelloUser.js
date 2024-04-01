@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const HelloWorld = () => {
+const HelloUser = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigator = useNavigate();
   const handleLogout = () => {
@@ -14,4 +14,4 @@ const HelloWorld = () => {
   )
 }
 
-export default HelloWorld
+export default HelloUser

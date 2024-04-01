@@ -23,7 +23,7 @@ function UserLoginPage() {
                 logInResponse = await userLogin(user);
                 if (response.status === 200 || response.status === 201) {
                     localStorage.setItem('token', response.data.token);
-                    navigate(`/helloWorld`);
+                    navigate(`/helloUser`);
                 }
             } catch (error) {
                 alert("Enter Valid Credentials");
